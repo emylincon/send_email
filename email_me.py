@@ -20,13 +20,12 @@ def send_email(msg, password, s_email):
 
 
 def main():
-    print('password')
-    #pass_ = gp.getpass('Enter Email password: ')
+    pass_ = gp.getpass('Enter Email password: ')
     sender_email = input('Enter email address to send to: ')
     message = input('Enter message: ')
-    x = input('password: ')
-    send_email(msg=message, password=x, s_email=sender_email)
+    #x = input('password: ')
+    send_email(msg=message, password=pass_, s_email=sender_email)
+
 
 if __name__ == '__main__':
-    print('hello')
     main()
