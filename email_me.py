@@ -1,5 +1,6 @@
 import getpass as gp
 import smtplib
+import os
 
 email_address = "spicetala@gmail.com"
 
@@ -10,7 +11,6 @@ def send_email(msg, password, s_email):
         server.ehlo()
         server.login(email_address, password)
         subject = "Tutorial Example"
-        # msg = 'Attendance done for {}'.format(_timer)
         _message = 'Subject: {}\n\n{}\n\n SENT BY RIHANNA \n\n'.format(subject, msg)
         server.sendmail(email_address, s_email, _message)
         server.quit()
@@ -28,4 +28,5 @@ def main():
 
 
 if __name__ == '__main__':
+    os.system('clear')
     main()
